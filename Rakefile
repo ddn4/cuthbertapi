@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-BaseApp::Application.load_tasks
+CuthbertAPI::Application.load_tasks
