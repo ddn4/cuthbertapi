@@ -11,7 +11,7 @@
 %h3
   Position
 
--if @user.position.exists?
+-if !@user.position.nil?
   %p
     %b latitiude:
     =@user.position.latitude
@@ -23,7 +23,6 @@
   %p
     %b timestamp:
     =@user.position.timestamp
-end
 
 = link_to 'Edit', edit_user_path(@user)
 \|
