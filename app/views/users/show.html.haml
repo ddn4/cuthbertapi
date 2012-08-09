@@ -1,0 +1,28 @@
+-# %p#notice= notice
+
+%p
+  %b Login:
+  =@user.login
+
+%p
+  %b Juxtapose ID:
+  =@user.juxtapose_id
+
+%h3
+  Position
+
+%p
+  %b latitiude:
+  =@user.position.latitude
+
+%p
+  %b longitude:
+  =@user.position.longitude
+
+%p
+  %b timestamp:
+  =@user.position.timestamp
+
+= link_to 'Edit', edit_user_path(@user)
+\|
+= link_to 'Back', users_path

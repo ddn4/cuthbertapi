@@ -1,4 +1,16 @@
 CuthbertAPI::Application.routes.draw do
+  # Seperate namespace to seperate API routes from html interface routes
+  # Set default format to json so calls don't have to use .json when call url
+  namespace :api, defaults: {format: 'json'} do 
+    namespace :v1 do
+      resources :users do
+        resources :positions
+      end
+    end
+  end
+
+  resources :users
+
   get "home/index"
 
   # The priority is based upon order of creation:

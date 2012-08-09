@@ -1,0 +1,6 @@
+module Api
+  module V1
+    class PositionsController < AppicationControler
+      respond_to :json
+
+      def def create
