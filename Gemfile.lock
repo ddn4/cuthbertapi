@@ -167,7 +167,7 @@ DEPENDENCIES
   haml-rails
   heroku
   jquery-rails
-  mongoid (~> 3.0.0.rc)
+  mongoid (~> 3.0.0)
   rails (= 3.2.6)
   rspec-rails
   sass-rails (~> 3.2.4)
