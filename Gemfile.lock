@@ -82,6 +82,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.19)
+    mongo (1.6.4)
+      bson (~> 1.6.4)
     mongoid (3.0.1)
       activemodel (~> 3.1)
       moped (~> 1.1.1)
@@ -167,6 +169,7 @@ DEPENDENCIES
   haml-rails
   heroku
   jquery-rails
+  mongo
   mongoid (~> 3.0.0)
   rails (= 3.2.6)
   rspec-rails

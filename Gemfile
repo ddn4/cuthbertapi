@@ -6,6 +6,7 @@ gem "thin" # dev and production server replacement for WEBrick
 gem 'bootstrap-sass' # Twitter bootstrap for UI support
 
 # MongoDB
+gem 'mongo'
 gem 'mongoid', '~> 3.0.0'
 gem 'bson_ext' # This seems to be crashing foreman
 # gem 'sqlite3'
