@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 ruby "1.9.3"  # Need to specify ruby version for Heroku production ruby to match dev ruby
 gem 'rails', '3.2.6'
 gem 'heroku'
@@ -6,9 +6,7 @@ gem "thin" # dev and production server replacement for WEBrick
 gem 'bootstrap-sass' # Twitter bootstrap for UI support
 
 # MongoDB
-gem 'mongo'
-gem 'mongoid', '~> 3.0.0'
-gem 'moped', '~>1.2.0'  # Mongo driver, trying to fix heroku error
+gem 'mongoid', '~> 3.0.0.rc'
 gem 'bson_ext' # This seems to be crashing foreman
 # gem 'sqlite3'
 

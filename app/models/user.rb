@@ -5,5 +5,5 @@ class User
 
   embeds_one :position
 
-  validates_uniqueness_of :login
+  # validates_uniqueness_of :login
 end
