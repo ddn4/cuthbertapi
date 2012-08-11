@@ -7,6 +7,7 @@ gem 'bootstrap-sass' # Twitter bootstrap for UI support
 
 # MongoDB
 gem 'mongoid', '~> 3.0.0.rc'
+gem 'moped', '1.1.5'
 gem 'bson_ext' # This seems to be crashing foreman
 # gem 'sqlite3'
 
