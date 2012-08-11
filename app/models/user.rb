@@ -1,6 +1,6 @@
 class User
   include Mongoid::Document
-  field :login,           type: String
+  field :username,           type: String
   # field :juxtapose_id,    type: String   # Store the juxtapose user id to support juxtapose API calls
 
   # embeds_one :position
