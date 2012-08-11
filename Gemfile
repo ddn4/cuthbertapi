@@ -1,6 +1,6 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 ruby "1.9.3"  # Need to specify ruby version for Heroku production ruby to match dev ruby
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.8'
 gem 'heroku'
 gem "thin" # dev and production server replacement for WEBrick
 gem 'bootstrap-sass' # Twitter bootstrap for UI support
