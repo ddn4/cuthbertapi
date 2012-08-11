@@ -8,6 +8,7 @@ gem 'bootstrap-sass' # Twitter bootstrap for UI support
 # MongoDB
 gem 'mongo'
 gem 'mongoid', '~> 3.0.0'
+gem 'moped', '~>1.2.0'  # Mongo driver, trying to fix heroku error
 gem 'bson_ext' # This seems to be crashing foreman
 # gem 'sqlite3'
 

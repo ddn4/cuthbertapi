@@ -171,6 +171,7 @@ DEPENDENCIES
   jquery-rails
   mongo
   mongoid (~> 3.0.0)
+  moped (~> 1.2.0)
   rails (= 3.2.6)
   rspec-rails
   sass-rails (~> 3.2.4)
