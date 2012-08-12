@@ -4,6 +4,5 @@ class Position
   field :longitude, type: Float
   field :timestamp, type: DateTime
   
-  # embedded_in :User
-  belongs_to  :user # Fixing heroku error matching juxt position model
+  embedded_in :User
 end

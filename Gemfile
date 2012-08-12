@@ -3,7 +3,7 @@ ruby "1.9.3"  # Need to specify ruby version for Heroku production ruby to match
 gem 'rails', '3.2.6'
 gem 'heroku'
 gem "thin" # dev and production server replacement for WEBrick
-gem 'bootstrap-sass' # Twitter bootstrap for UI support
+# gem 'bootstrap-sass' # Twitter bootstrap for UI support
 
 # MongoDB
 gem 'mongoid', '3.0.1'
