@@ -11,18 +11,22 @@
 %h3
   Position
 
--if !@user.position.nil?
-  %p
-    %b latitiude:
-    =@user.position.latitude
+%table
+  %tr
+    %th Latitude
+    %th Longitude
+    %th Timestamp
 
-  %p
-    %b longitude:
-    =@user.position.longitude
+  -if !@user.position.nil?
+    %tr
+      %td
+        =@user.position.latitude
 
-  %p
-    %b timestamp:
-    =@user.position.timestamp
+      %td 
+        =@user.position.longitude
+
+      %td 
+        =@user.position.timestamp
 
 = link_to 'Edit', edit_user_path(@user)
 \|
