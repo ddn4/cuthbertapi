@@ -1,9 +1,13 @@
 source 'http://rubygems.org'
 ruby "1.9.3"  # Need to specify ruby version for Heroku production ruby to match dev ruby
+
 gem 'rails', '3.2.8'
 gem 'heroku'
 gem "thin" # dev and production server replacement for WEBrick
 gem 'bootstrap-sass' # Twitter bootstrap for UI support
+gem 'jquery-rails'
+gem 'haml-rails'
+gem 'httparty', '~> 0.8.3'
 
 # MongoDB
 gem 'mongoid', '~> 3.0.0'
@@ -11,9 +15,6 @@ gem 'moped'
 gem 'bson_ext' # This seems to be crashing foreman
 # gem 'sqlite3'
 
-gem 'jquery-rails'
-
-gem 'haml-rails'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

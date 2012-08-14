@@ -1,6 +1,10 @@
 CuthbertAPI::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  config.after_initialize do
+    Configuration.juxtapose_api_url = 'http://morning-escarpment-1668.herokuapp.com/api/v1'
+  end
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
