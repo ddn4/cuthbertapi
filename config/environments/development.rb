@@ -2,7 +2,8 @@ CuthbertAPI::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   config.after_initialize do
-    Configuration.juxtapose_api_url = 'http://localhost:5001/api/v1'
+    Configuration.juxtapose_api_url = 'http://localhost:5001'
+    # Configuration.juxtapose_api_url = 'http://simple-flower-6093.herokuapp.com'
   end
   
   # In the development environment your application's code is reloaded on
