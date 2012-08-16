@@ -9,13 +9,17 @@ module Api
         
         # Create a new position if one doesn't exist, or update existing position
         if @user.position.nil?
-          puts "position nil"
           @user.position = Position.new(params[:position])
         else
-          puts "position exists"
           @user.position.update_attributes(params[:position])
         end
 
+        # Send position to Juxtapose API
+        Juxtapose.post_new_position(@user.juxtapose_id, 
+                                    @user.position.latitude, @user.position.longitude,
+                                    @user.position.timestamp)
+
+        # Store last position locally
         if @user.position.save
           render :json => @user.position
           # render :json @position, status: :created, location: @position
