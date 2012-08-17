@@ -3,7 +3,7 @@ class Juxtapose
   # include Mongoid::Document
   include HTTParty
   format  :json
-  base_uri Configuration.juxtapose_api_url
+  base_uri Configuration.juxtapose_api_url.to_s
 
   def self.post_new_position(id, lat, lon, timestamp)
     post('/users/' + id.to_s  + '/positions.json',
