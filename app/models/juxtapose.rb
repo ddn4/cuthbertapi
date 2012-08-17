@@ -7,7 +7,7 @@ class Juxtapose
 
   def self.post_new_position(id, lat, lon, timestamp)
     post('/users/' + id.to_s  + '/positions.json',
-      :query => { :position => {:latitude => lat, :longitude => lon, :timestamp => timestamp } }
+      :body => { :position => {:latitude => lat, :longitude => lon, :timestamp => timestamp } }
     )
   end  
 
