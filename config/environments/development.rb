@@ -4,6 +4,7 @@ CuthbertAPI::Application.configure do
   config.after_initialize do
     Configuration.juxtapose_api_url = 'http://localhost:5001'
     # Configuration.juxtapose_api_url = "https://simple-flower-6093.herokuapp.com"
+    PositionResource.site = Configuration.juxtapose_api_url
   end
   
   # In the development environment your application's code is reloaded on
