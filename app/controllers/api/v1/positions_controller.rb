@@ -14,10 +14,12 @@ module Api
           @user.position.update_attributes(params[:position])
         end
 
-        # Send position to Juxtapose API
-        Juxtapose.post_new_position(@user.juxtapose_id, 
-                                    @user.position.latitude, @user.position.longitude,
-                                    @user.position.timestamp)
+        # Create a new position in Juxtapose API
+        position_resource = PositionResource.new(:user_id => @user.juxtapose_id,
+                                                  :latitude => @user.position.latitude,
+                                                  :longitude => @user.position.longitude,
+                                                  :timestamp => @user.position.timestamp)
+        position_resource.save
 
         # Store last position locally
         if @user.position.save
