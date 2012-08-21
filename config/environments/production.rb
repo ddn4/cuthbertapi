@@ -2,7 +2,7 @@ CuthbertAPI::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   config.after_initialize do
-    Configuration.juxtapose_api_url = 'http://simple-flower-6093.herokuapp.com/'
+    Configuration.juxtapose_api_url = 'http://simple-flower-6093.herokuapp.com'
   end
 
   # Code is not reloaded between requests
