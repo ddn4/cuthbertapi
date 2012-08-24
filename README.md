@@ -13,16 +13,24 @@ The Cuthbert API
 Adds a new position for the specified user
 
 	POST [base route]/user/:user_id/positions.json
-
-	paramaterers:
-
-		{"position":
-			{"latitude":"[value]"},
-			{"longitude":"[value]"},
-			{"timestamp":"[value]"}
-		}  		
 	
-	timestamp format: YYYY-MM-DD 24hh:mm:ss 
+	Header: Content-Type:application/json
+
+	Body:
+
+	{
+    "position": {
+        "latitude": "value",
+        "longitude": "value",
+        "timestamp": "YYYY-MM-DD 24hh:mm:ss"
+    }	
+		
+	HTTP Response Header Values:
+		200 Success - New position was saved
+		500 Internal Server Error - Position was not saved
+		
+	HTTP Body Response Values:
+		{"position":{"latitiude":"value"", "longitude":"value", "timestamp":"value"}}
 				
 Sample POST using cURL
 
