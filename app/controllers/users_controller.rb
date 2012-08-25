@@ -41,6 +41,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(params[:user])
+    @user.build_position # Build embedded Position instance
 
     respond_to do |format|
       if @user.save
