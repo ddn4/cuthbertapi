@@ -1,8 +1,8 @@
 CuthbertAPI::Application.routes.draw do
   resources :users
 
-  # Seperate namespace to seperate API routes from html interface routes
-  # Set default format to json so calls don't have to use .json when call url
+  # Seperate namespace to isolate API routes from html interface routes
+  # Set default format to json so client calls don't have to use .json when specifying  url
   namespace :api, defaults: {format: 'json'} do 
     namespace :v1 do
       resources :users do

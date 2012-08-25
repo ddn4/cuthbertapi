@@ -7,7 +7,6 @@ gem "thin" # dev and production server replacement for WEBrick
 gem 'bootstrap-sass' # Twitter bootstrap for UI support
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'httparty', '~> 0.8.3'
 
 # MongoDB
 gem 'mongoid', '~> 3.0.0'

@@ -70,7 +70,6 @@ test:
 production:
   sessions:
     default:
-      # uri: <%= ENV['MONGOHQ_URL'] %>  # Connection info. for MongoHQ on heroku
       uri: <%= ENV['MONGOLAB_URI'] %> # Connection info. for MongoLab on heroku
       options:
         consistency: :strong

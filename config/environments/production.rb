@@ -3,9 +3,9 @@ CuthbertAPI::Application.configure do
 
   config.after_initialize do
     Configuration.juxtapose_api_url = 'http://simple-flower-6093.herokuapp.com'
-    # FIXME Need to set sit attribute explicitly in ActiveResource based PositionResource class
+    # FIXME Need to set site attribute explicitly in ActiveResource based PositionResource class
     # For some reason this block of code is exectued after PositionResource is defined on heroku and the
-    # Configuration.juxtapose_api_url value is not available in PositionResource when it is initalize
+    # Configuration.juxtapose_api_url value is not available in PositionResource when it is initalized
     PositionResource.site = Configuration.juxtapose_api_url
   end
 

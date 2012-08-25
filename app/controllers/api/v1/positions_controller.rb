@@ -14,7 +14,7 @@ module Api
                                                    :longitude => params[:position][:longitude],
                                                    :timestamp => params[:position][:timestamp])
         begin
-          position_resource.save!
+          position_resource.save! # Use save! to force client side validations
           
           # Store last position locally, postion_resource.save valdates params so local save should not fail
           @user.position.update_attributes(params[:position])
@@ -25,11 +25,11 @@ module Api
         # See ActiveResource documentation for specific exceptions that are raised
         # Invalid format, object failed attribute validation
         rescue ActiveResource::ResourceInvalid
-          render :json => position_resource.errors, status: :unprocessable_entity
+          render :json => position_resource.errors, status: :unprocessable_entity   # 422 Error
 
         # Any other generic server side failure message is trapped here
         rescue
-          render :json => position_resource.errors, status: :internal_server_error
+          render :json => position_resource.errors, status: :internal_server_error  # 500 Error
         end
       end
       

@@ -6,6 +6,7 @@ class PositionResource < ActiveResource::Base
   self.element_name = "position"
   self.format = :json
 
+  # Use schema to define the attributes so they are available for local validation
   schema do
     float :latitude, :longitude
     datetime :timestamp
