@@ -8,31 +8,36 @@ The Cuthbert API
 
 **Base Roue:** [base url]/api/v1
 
-### Add a new position
+### Add a new position - POST [base route]/user/:user_id/positions.json
 
 Adds a new position for the specified user
-
-	POST [base route]/user/:user_id/positions.json
 	
-	Header: Content-Type:application/json
+Header: Content-Type:application/json
 
-	Body:
+:user_id - Cuthert API user id
+
+Body:
 
 	{
-    "position": {
+	  "position": {
         "latitude": "value",
         "longitude": "value",
         "timestamp": "YYYY-MM-DD 24hh:mm:ss"
+      }
     }	
 		
-	HTTP Response Header Values:
-		200 Success - New position was saved
-		500 Internal Server Error - Position was not saved
+#####HTTP Response Header Values:
+
+* 200 Success - New position was saved
+* 422 Client Error - Inavlid resource, position was not saved
+* 500 Internal Server Error - Position was not saved
 		
-	HTTP Body Response Values:
-		{"position":{"latitiude":"value"", "longitude":"value", "timestamp":"value"}}
+#####HTTP Body Response Values:
+
+* **success** {"position":{"latitiude":"value"", "longitude":"value", "timestamp":"value"}}
+* **failure** {"attribute name":["error explanations"]}
 				
-Sample POST using cURL
+#####Sample POST using cURL
 
 ````
 curl -d "position[latitude]=40.1456"  -d "position[longitude]= -75.283" 
