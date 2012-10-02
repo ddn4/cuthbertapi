@@ -14,7 +14,7 @@ class PositionResource < ActiveResource::Base
 
   validates_presence_of :latitude, :longitude, :timestamp
   validates_numericality_of :latitude, :longitude
-  validates_format_of :timestamp, :with => /\A(20)\d\d[-](0[1-9]|(1[0-2]))[-](0[1-9]|[12][0-9]|3[01])[ ](0[0-9]|1[0-9]|2[0-4])[:]([0-5]\d)[:]([0-5]\d)\Z/i,
+  validates_format_of :timestamp, :with => /\A(20)\d\d[-](0[1-9]|(1[0-2]))[-](0[1-9]|[12][0-9]|3[01])[ ](0[0-9]|1[0-9]|2[0-4])[:]([0-5]\d)[:]([0-5]\d)[ ]\+0000\Z/i,
                                   :message => "Invalid format, expecting YYYY-MM-DD HH:MM:SS"
 
 end
