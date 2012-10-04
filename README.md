@@ -22,7 +22,7 @@ Body:
 	  "position": {
         "latitude": "value",
         "longitude": "value",
-        "timestamp": "YYYY-MM-DD 24hh:mm:ss"
+        "timestamp": "YYYY-MM-DD 24hh:mm:ss +0000"
       }
     }	
 		
